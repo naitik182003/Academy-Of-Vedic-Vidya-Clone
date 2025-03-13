@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="mycss.css" rel="stylesheet">
+    <style>
+        .cod-md-3{
+            height: 183px;
+            width: 183px;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+        form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Open dropdown on hover */
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Fix alignment issue */
+}
+.images img {
+    width: 100%; /* Scale width to fit the container */
+    height: 400px; /* Match the carousel height */
+    object-fit: cover; /* Crop the image to maintain aspect ratio */
+    display: block;
+}
+h2 {
+    text-align: center;
+    color: #522a58;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Focus Styling */
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit Button */
+.btn-submit {
+    background-color: #522a58;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+/* Hover Effect for Button */
+.btn-submit:hover {
+    background-color: #6a3574;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+}
+
+
+
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: #f8f9fa;"> 
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="/">
+                    <img src="PICS/New-Logo-_PNG_.avif" alt="Logo" style="height: 50px;">
+                </a>
+        
+                <!-- Toggler Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    style="background-color: #000; border: none; padding: 5px 10px; border-radius: 4px;">
+                    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+                </button>
+        
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <!-- Home -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/" 
+                                style="color: #000; padding: 10px 20px; transition: 0.3s ease;">
+                                Home
+                            </a>
+                        </li>
+        
+                        <!-- Courses Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" 
+                                data-bs-toggle="dropdown" aria-expanded="false" 
+                                style="color: #000; padding: 10px 20px; transition: 0.3s ease;">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                                <li><a class="dropdown-item" href="course1.html">Vedic Numerology</a></li>
+                                <li><a class="dropdown-item" href="course2.html">Vedic Astrology</a></li>
+                                <li><a class="dropdown-item" href="course3.html">Pranic Healing</a></li>
+                                <li><a class="dropdown-item" href="course4.html">Vastu Shastra</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="all-courses.html">View All Courses</a></li>
+                            </ul>
+                        </li>
+        
+                        <!-- Important Links Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" 
+                                data-bs-toggle="dropdown" aria-expanded="false" 
+                                style="color: #000; padding: 10px 20px; transition: 0.3s ease;">
+                                Important Links
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="numcalc.html">Numerology Calculator</a></li>
+                                <li><a class="dropdown-item" href="zodiac.html">Zodiac</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+        
+                        <!-- Disabled Link -->
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true" 
+                                style="color: #ccc; padding: 10px 20px;">
+                                Disabled
+                            </a>
+                        </li>
+                    </ul>
+        
+                    <!-- Search Form -->
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            style="border-radius: 20px; border: 1px solid #ccc; background-color: #fff; color: #000;">
+                        <button class="btn btn-dark" type="submit" 
+                            style="border-radius: 20px;">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        
+        
+    </header>
+    <div class="images">
+        <a><img src="PICS/horoscope calculator.avif">
+            <h2>Daily Horoscope Calculator</h2>
+            <form id="horoscopeForm">
+                <!-- Full Name -->
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+        
+                <!-- Date of Birth -->
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+        
+                <!-- Place of Birth -->
+                <label for="birthPlace">Place of Birth</label>
+                <input type="text" id="birthPlace" name="birthPlace" placeholder="Enter your place of birth" required>
+        
+                <!-- Gender -->
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+        
+                <!-- Submit Button -->
+                <button type="submit" class="btn-submit">Calculate Horoscope</button>
+            </form>
+        </div>
+        </a>
+    </div>
+
+      
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="PICS/Aries-min_compressed_Webp.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Aries</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="PICS/Taurus.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Taurus</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="PICS/Gemini.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Gemini</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="PICS/Cancer.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Cancer</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="PICS/Leo.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Leo</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="PICS/Virgo.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Virgo</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="PICS/Libra.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Libra</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="PICS/Scorpio.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Scorpio</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="PICS/Sagittarius.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sagittarius</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="PICS/Capricorn.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Capricorn</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="PICS/Aquarius.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Aquarius</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="PICS/Pisces.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pisces</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="container align-items-left">
+                
+            <script>
+                // JavaScript to handle form submission
+                document.getElementById('horoscopeForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+            
+                    // Get form values
+                    const fullName = document.getElementById('fullName').value;
+                    const dob = document.getElementById('dob').value;
+                    const birthPlace = document.getElementById('birthPlace').value;
+                    const gender = document.getElementById('gender').value;
+            
+                    // Validate fields
+                    if (!fullName || !dob || !birthPlace || !gender) {
+                        alert('Please fill out all fields');
+                        return;
+                    }
+            
+                    // Example result (Replace with actual horoscope calculation logic)
+                    alert(`Hello ${fullName}! Your daily horoscope will be calculated based on:\n\n- Date of Birth: ${dob}\n- Place of Birth: ${birthPlace}\n- Gender: ${gender}`);
+                    
+                    // 👉 Add logic to calculate horoscope based on DOB, birth place, and gender
+                });
+            </script>
+    
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Logo Section -->
+            <div>
+                <p>Follow us on:</p>
+                <a href="https://www.youtube.com/@AcademyOfVedicVidya">
+                    <img src="PICS/youtube.avif"  class="icon" alt="Logo">
+                </a>
+                
+                <a href="https://www.instagram.com/academyofvedicvidya" target="_blank">
+                    <img src="PICS/instagram.avif" class="icon"  alt="Logo">
+                </a>
+
+                <a href="https://www.facebook.com/academyofvedicvidya.official/" target="_blank">
+                    <img src="PICS/facebook icon.avif" class="icon"  alt="Logo">
+                </a>
+
+                <p>Powered by<br>
+                    SkillEnable EduTech Pvt Ltd.</p>
+                    
+                <small>Regd. under Ministry of Corporate Affairs<br>
+                    Government of India</small>
+            </div>
+
+            <!-- Footer Links 
+            <div class="footer-links">
+                <a href="#">Home</a> 
+                <a href="#">Courses</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>-->
+
+            <!-- Social Media Icons -->
+            <div class="icon">
+                <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Your Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.js"></script>
+</body>
+</html>
